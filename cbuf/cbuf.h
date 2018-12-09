@@ -15,6 +15,8 @@ circular_buffer {
 
 /* circular buffer functions */
 void cbuf_init(cbuf_t *cbuf, uint8_t *buffer, size_t size);
-void cbuf_put(cbuf_t *cbuf, uint8_t data);
+int  cbuf_ptrpos(cbuf_t *cbuf, uint8_t *ptr);
+void cbuf_write(cbuf_t *cbuf, uint8_t data);
+uint8_t cbuf_read(cbuf_t *cbuf);
 
 #endif
