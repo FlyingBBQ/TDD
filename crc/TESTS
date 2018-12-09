@@ -1,0 +1,8 @@
+TESTS:
+- XOR the input
+- shift the bits
+- verify the output
+- support multiple lengths
+- generate tables
+
+COMPLETED:
