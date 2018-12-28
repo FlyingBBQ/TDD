@@ -1,6 +1,6 @@
-#include "cbuf.h"
-#include <stdio.h>
+#include <cbuf.h>
 #include <assert.h>
+#include <stdio.h>
 
 void
 cbuf_init(cbuf_t *cbuf, uint8_t *buffer, size_t size)
@@ -43,11 +43,8 @@ cbuf_read(cbuf_t *cbuf)
     return (cbuf->buffer[pos]);
 }
 
-
-int
-main(void)
+void
+cmake_test(void)
 {
-    printf("made\n");
-    return 0;
+    printf("ez\n");
 }
-

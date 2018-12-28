@@ -19,4 +19,6 @@ int  cbuf_ptrpos(cbuf_t *cbuf, uint8_t *ptr);
 void cbuf_write(cbuf_t *cbuf, uint8_t data);
 uint8_t cbuf_read(cbuf_t *cbuf);
 
+void cmake_test(void);
+
 #endif
