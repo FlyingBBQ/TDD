@@ -1,5 +1,8 @@
+# template file for adding external project
+# during build time this file will be copied and executed
 cmake_minimum_required(VERSION 2.8.11)
 
+# NONE specifies no compile language
 project(googletest-download NONE)
 
 # Enable ExternalProject CMake module
