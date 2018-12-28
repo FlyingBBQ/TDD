@@ -74,7 +74,7 @@ static void test_cbuf_read_wrap(void **state) {
 
     assert_int_equal(cbuf_read(&cbuf), 30);
     assert_int_equal(cbuf_read(&cbuf), 31);
-    assert_int_equal(cbuf_read(&cbuf), 30);
+    assert_int_equal(cbuf_read(&cbuf), 32);
 }
 
 /* run the test functions */

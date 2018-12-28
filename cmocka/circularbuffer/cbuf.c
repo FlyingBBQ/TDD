@@ -1,5 +1,6 @@
 #include "cbuf.h"
 #include <assert.h>
+#include <stdio.h>
 
 void
 cbuf_init(cbuf_t *cbuf, uint8_t *buffer, size_t size)
@@ -30,13 +31,13 @@ cbuf_write(cbuf_t *cbuf, uint8_t data)
 uint8_t
 cbuf_read(cbuf_t *cbuf)
 {
-    int pos = cbuf_ptrpos(cbuf, cbuf->tail);
-
     if (cbuf_ptrpos(cbuf, cbuf->tail) >= cbuf->size)
     {
         cbuf->tail = cbuf->buffer;
+        //return (cbuf->buffer[pos]);
     }
 
+    int pos = cbuf_ptrpos(cbuf, cbuf->tail);
     cbuf->tail++;
 
     return (cbuf->buffer[pos]);
