@@ -6,7 +6,7 @@
 ###############################################################################
 
 # Minimum version of CMake to use
-cmake_minimum_required(VERSION 2.8.2 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.8 FATAL_ERROR)
 
 ###############################################################################
 #   Options
@@ -32,11 +32,14 @@ set(PROJECT_TEST_NAME ${PROJECT_NAME}_test)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
+# compiler settings
+set(CMAKE_CXX_STANDARD 11)
+
 ###############################################################################
 #   BEGIN GoogleTest
 ###############################################################################
 # use boolean with compile option to build and make GoogleTest
-if(gen_gtest)
+if(get_gtest)
     # Download and unpack  googletest at configure time.
     # configure_file() copies template file to build area,
     # it also does variable substitution for CMAKE_BINARY_DIR.
@@ -113,8 +116,9 @@ add_subdirectory(main)
 #   Testing
 ###############################################################################
 if(test)
+    enable_testing()
     # link and test
-    #add_subdirectory(test)
+    add_subdirectory(test)
 endif()
 
 ###############################################################################

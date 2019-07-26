@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
-project(sample VERSION 1.0 LANGUAGES C)
-
+###############################################################################
+# --- SUB CMAKE FILE ---
+###############################################################################
 # this is a minimal example how to add a library
 # https://stackoverflow.com/questions/46296487/include-headers-with-a-library-in-cmake
 add_library(sample_lib STATIC cbuf_lib.c)

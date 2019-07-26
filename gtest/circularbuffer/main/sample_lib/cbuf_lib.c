@@ -2,5 +2,5 @@
 
 void lib_include_test(void)
 {
-    printf("lib\n");
+    printf("lib hallo\n");
 }
